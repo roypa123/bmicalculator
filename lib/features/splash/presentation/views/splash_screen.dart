@@ -23,7 +23,7 @@ class SplashScreen extends StatelessWidget {
         }
       },
       child: Scaffold(
-        backgroundColor: AppColors.white,
+        backgroundColor: AppColors.backgroundColor,
         body: SizedBox(
           width: double.maxFinite,
           height: double.maxFinite,
@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
               Icon(
                 Icons.accessibility,
                 size: 200.w,
-                color: AppColors.primaryColor ,
+                color: AppColors.mainColor ,
               ),
               25.verticalSpace,
               Text(
@@ -42,7 +42,7 @@ class SplashScreen extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 24.sp,
                     fontWeight: FontWeight.bold,
-                    color: AppColors.primaryColor ),
+                    color: AppColors.mainColor ),
               ),
             ],
           ),
