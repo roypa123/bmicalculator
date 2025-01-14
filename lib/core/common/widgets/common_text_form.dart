@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../configs/styles/app_colors.dart';
+
 class CommonTextForm extends StatelessWidget {
   final TextEditingController controller;
 
- 
-
   const CommonTextForm({
     super.key,
- 
     required this.controller,
   });
 
@@ -20,12 +19,13 @@ class CommonTextForm extends StatelessWidget {
         autovalidateMode: AutovalidateMode.onUserInteraction,
         controller: controller,
         keyboardType: TextInputType.number,
-        validator: (value) {
-          return null;
-        },
+        // validator: (value) {
+        //   return null;
+        // },
         decoration: const InputDecoration(
-          isDense: true,
+          isDense: false,
           filled: true,
+          fillColor: AppColors.white,
         ),
       ),
     );

@@ -4,7 +4,13 @@ class Strings {
   static const String enterWeight = "Enter Weight (kg)";
   static const String enterHeight = "Enter Height (m)";
 
+  static const String yourBmiIs = "Your BMI is";
+  static const String number1 = "18.5";
+  static const String obese = "Obese";
+ 
+
   static const String submit = "Submit";
+  static const String reset = "Reset";
 
   static const String paragraph1 =
       "Body Mass Index (BMI) is a numerical value calculated from a person's weight and height. It is a widely used method to classify individuals into weight categories and assess their body fat levels. The formula for BMI is:";

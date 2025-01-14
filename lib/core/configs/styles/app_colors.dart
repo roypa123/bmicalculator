@@ -9,4 +9,5 @@ class AppColors {
 
   static const mainColor = Color(0XFFA294F9);
   static const backgroundColor =Color(0XFFF5EFFF);
+  static const red = Colors.red;
 }

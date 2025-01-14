@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/common/widgets/common_app_bar.dart';
+import '../../../../core/common/widgets/common_primary_button.dart';
 import '../../../../core/common/widgets/common_text_form.dart';
 import '../../../../core/configs/constants/string_constants.dart';
 import '../../../../core/configs/styles/app_colors.dart';
@@ -74,31 +75,56 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   25.verticalSpace,
                   Container(
-                    color: Colors.yellow,
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 10.h, vertical: 10.w),
                     width: 300.w,
-                    height: 200.w,
-                    child: Text("sdssds"),
+                    height: 150.w,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12.r),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 0.1,
+                          blurRadius: 0.1,
+                          offset: const Offset(1, 1),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(Strings.yourBmiIs,style: TextStyle(fontSize: 15.sp),),
+                        Text(Strings.number1,style: TextStyle(fontSize: 35.sp),),
+                        Text(Strings.obese,style: TextStyle(fontSize: 20.sp))
+                      ],
+                    ),
                   ),
                   25.verticalSpace,
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.mainColor,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 32.w, vertical: 16.h),
-                    ),
-                    onPressed: () {
-                      if (formKey.currentState!.validate()) {
-                        context.read<MainBloc>().add(
-                              SubmitEvent(
-                                  weight: weightController.text.trim(),
-                                  height: heightController.text.trim()),
-                            );
-                      }
-                    },
-                    child: const Text(
-                      Strings.submit,
-                      style: TextStyle(color: AppColors.white),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CommonPrimaryButton(
+                        color: AppColors.red,
+                        text: Strings.reset,
+                        function: () {},
+                      ),
+                      25.horizontalSpace,
+                      CommonPrimaryButton(
+                        color: AppColors.mainColor,
+                        text: Strings.submit,
+                        function: () {
+                          if (formKey.currentState!.validate()) {
+                            context.read<MainBloc>().add(
+                                  SubmitEvent(
+                                      weight: weightController.text.trim(),
+                                      height: heightController.text.trim()),
+                                );
+                          }
+                        },
+                      ),
+                    ],
                   ),
                 ],
               ),
