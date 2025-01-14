@@ -5,5 +5,12 @@ part 'main_event.dart';
 part 'main_state.dart';
 
 class MainBloc extends Bloc<MainEvent, MainState> {
-  MainBloc() : super(MainInitial()); 
+  MainBloc() : super(MainInitial()) {
+    on<SubmitEvent>(_submitHandler);
+  }
+
+  Future<void> _submitHandler(
+    SubmitEvent event,
+    Emitter<MainState> emit,
+  ) async {}
 }

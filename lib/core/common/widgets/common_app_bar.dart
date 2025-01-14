@@ -7,6 +7,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final bool? leadingButton;
   final bool? trailingButton;
+
   const CommonAppBar(
       {super.key, this.title, this.leadingButton, this.trailingButton});
 
@@ -31,7 +32,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
         if (trailingButton ?? false)
           GestureDetector(
             onTap: () {
-              Navigator.pushReplacementNamed(context, RouteConstants.routeInfo);
+              Navigator.pushNamed(context, RouteConstants.routeInfo);
             },
             child: const Icon(Icons.info),
           ),

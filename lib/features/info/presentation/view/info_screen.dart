@@ -12,8 +12,8 @@ class InfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: const CommonAppBar(
-        title: "BMI (Body Mass Index)",
+      appBar:  const CommonAppBar(
+        title: Strings.bmiBodyMassIndex,
       ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
