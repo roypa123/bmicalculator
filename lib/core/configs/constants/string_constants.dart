@@ -7,6 +7,11 @@ class Strings {
   static const String yourBmiIs = "Your BMI is";
   static const String number1 = "18.5";
   static const String obese = "Obese";
+
+  static const String obesity = "Obesity";
+  static const String overWeight = "Overweight";
+  static const String normalWeight = "Normal weight";
+  static const String underWeight = "Underweight";
  
 
   static const String submit = "Submit";

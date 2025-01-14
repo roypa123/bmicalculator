@@ -17,3 +17,9 @@ class SubmitEvent extends MainEvent {
   List<String> get props => [weight, height];
 }
 
+class ResetEvent extends MainEvent {
+  const ResetEvent();
+
+  @override
+  List<String> get props => [];
+}

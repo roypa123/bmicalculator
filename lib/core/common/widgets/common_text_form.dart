@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../configs/styles/app_colors.dart';
+import '../../utils/helpers/validators.dart';
 
 class CommonTextForm extends StatelessWidget {
   final TextEditingController controller;
@@ -19,9 +20,9 @@ class CommonTextForm extends StatelessWidget {
         autovalidateMode: AutovalidateMode.onUserInteraction,
         controller: controller,
         keyboardType: TextInputType.number,
-        // validator: (value) {
-        //   return null;
-        // },
+        validator: (value) {
+          return Validators.validateNumber(value);
+        },
         decoration: const InputDecoration(
           isDense: false,
           filled: true,
