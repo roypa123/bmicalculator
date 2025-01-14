@@ -23,6 +23,11 @@ class RouteGenerator {
               child: const MainScreen(),
             ));
 
+      case RouteConstants.routeInfo:
+        return _buildRoute(
+            RouteConstants.routeInfo,
+            const InfoScreen());
+
       default:
         return _buildRoute(RouteConstants.routeEmpty, const EmptyScreen());
     }
